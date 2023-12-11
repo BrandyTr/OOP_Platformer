@@ -7,10 +7,12 @@ public class GameWindow {
     public GameWindow(GamePanel gamePanel) {
         jframe = new JFrame();
 
-        jframe.setSize(400,400);
+
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jframe.setLocationRelativeTo(null); //set location at center screen
         jframe.add(gamePanel);
+        jframe.setLocationRelativeTo(null); //set location at center screen
+        jframe.setResizable(false);
+        jframe.pack(); //fit the size of Window to the preferred size of component
         jframe.setVisible(true);
     }
 }
